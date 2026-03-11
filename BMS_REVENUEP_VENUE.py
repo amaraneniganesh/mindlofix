@@ -31,7 +31,7 @@ def load_venues(filepath=INPUT_FILE):
     with open(filepath, 'r', encoding='utf-8') as f:
         try:
             data = json.load(f)
-            if isicnstance(data, dict):
+            if isinstance(data, dict):
                 return list(data.values())
             return data
         except json.JSONDecodeError:
