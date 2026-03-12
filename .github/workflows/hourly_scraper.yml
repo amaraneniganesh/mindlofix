@@ -30,15 +30,18 @@ jobs:
       - name: Install Chromium
         run: playwright install chromium --with-deps
 
+      - name: Create data directory
+        run: mkdir -p data
+
       - name: Run scraper
         env:
           SUPER_KEY: ${{ secrets.SUPER_KEY }}
-        run: python "run.py"
+        run: python run.py
 
       - name: Commit and push data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "DAILY SALES/data/"
+          git add data/
           git diff --cached --quiet || git commit -m "data: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
