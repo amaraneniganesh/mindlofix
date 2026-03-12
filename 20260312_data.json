@@ -1,877 +1,40 @@
 {
-    "The Kerala Story 2: Goes Beyond - Hindi": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/the-kerala-story-2-goes-beyond-et00484171-1770209319.jpg",
-        "Overall_TotalRevenue": 53660.0,
-        "Overall_TotalSeats": 12544,
-        "Overall_TotalBookedSeats": 294,
-        "Overall_TotalShows": 66,
+    "They Call Him OG - Telugu": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/they-call-him-og-et00369074-1758290791.jpg",
+        "Overall_TotalRevenue": 2200.0,
+        "Overall_TotalSeats": 1668,
+        "Overall_TotalBookedSeats": 44,
+        "Overall_TotalShows": 4,
         "Overall_SoldOutShows": 0,
         "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 2.34,
+        "Overall_OccupancyPercentage": 2.64,
         "Locations": {
-            "Gujarat": {
-                "State_TotalRevenue": 10690.0,
-                "State_TotalSeats": 2354,
-                "State_TotalBookedSeats": 43,
-                "State_TotalShows": 24,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 1.83,
-                "Cities": {
-                    "Junagadh": {
-                        "City_TotalRevenue": 10690.0,
-                        "City_TotalSeats": 450,
-                        "City_TotalBookedSeats": 43,
-                        "City_TotalShows": 5,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 9.56,
-                        "Venues": {
-                            "SCJG - Suraj Cineplex: Junagadh": {
-                                "Venue_TotalRevenue": 10690.0,
-                                "Venue_TotalSeats": 450,
-                                "Venue_TotalBookedSeats": 43,
-                                "Venue_TotalShows": 5,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 9.56
-                            }
-                        }
-                    },
-                    "Gandhinagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 356,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 7,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 356,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 7,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Himmatnagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 1074,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 6,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "NXTM - NXT Cinemas: Nr. Salal, Himmatnagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 1074,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 6,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Visnagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 474,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 6,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SCSZ - Sanelite Cinemas: Sarthak Square, Visnagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 474,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 6,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Bihar": {
-                "State_TotalRevenue": 1430.0,
-                "State_TotalSeats": 1834,
-                "State_TotalBookedSeats": 11,
-                "State_TotalShows": 8,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.6,
-                "Cities": {
-                    "Hajipur": {
-                        "City_TotalRevenue": 1430.0,
-                        "City_TotalSeats": 1834,
-                        "City_TotalBookedSeats": 11,
-                        "City_TotalShows": 8,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.6,
-                        "Venues": {
-                            "NCHJ - Navin Cinema: Hajipur": {
-                                "Venue_TotalRevenue": 1430.0,
-                                "Venue_TotalSeats": 950,
-                                "Venue_TotalBookedSeats": 11,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 1.16
-                            },
-                            "DDCK - DD Cinemas: Cine Krishna Mall, Hajipur": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 884,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Madhya Pradesh": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 784,
-                "State_TotalBookedSeats": 0,
+            "Andhra Pradesh": {
+                "State_TotalRevenue": 2200.0,
+                "State_TotalSeats": 1668,
+                "State_TotalBookedSeats": 44,
                 "State_TotalShows": 4,
                 "State_SoldOutShows": 0,
                 "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
+                "State_OccupancyPercentage": 2.64,
                 "Cities": {
-                    "Mandla": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 784,
-                        "City_TotalBookedSeats": 0,
+                    "Giddalur": {
+                        "City_TotalRevenue": 2200.0,
+                        "City_TotalSeats": 1668,
+                        "City_TotalBookedSeats": 44,
                         "City_TotalShows": 4,
                         "City_SoldOutShows": 0,
                         "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
+                        "City_OccupancyPercentage": 2.64,
                         "Venues": {
-                            "KIGH - Kingfisher Multiplex: Mandla": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 784,
-                                "Venue_TotalBookedSeats": 0,
+                            "KRGD - Krishna Theater: Giddalur": {
+                                "Venue_TotalRevenue": 2200.0,
+                                "Venue_TotalSeats": 1668,
+                                "Venue_TotalBookedSeats": 44,
                                 "Venue_TotalShows": 4,
                                 "Venue_SoldOutShows": 0,
                                 "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Uttarakhand": {
-                "State_TotalRevenue": 12400.0,
-                "State_TotalSeats": 436,
-                "State_TotalBookedSeats": 48,
-                "State_TotalShows": 2,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 11.01,
-                "Cities": {
-                    "Nainital": {
-                        "City_TotalRevenue": 12400.0,
-                        "City_TotalSeats": 436,
-                        "City_TotalBookedSeats": 48,
-                        "City_TotalShows": 2,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 11.01,
-                        "Venues": {
-                            "NWCC - New Capitol Cinema: Nainital": {
-                                "Venue_TotalRevenue": 12400.0,
-                                "Venue_TotalSeats": 436,
-                                "Venue_TotalBookedSeats": 48,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 11.01
-                            }
-                        }
-                    }
-                }
-            },
-            "Uttar Pradesh": {
-                "State_TotalRevenue": 720.0,
-                "State_TotalSeats": 736,
-                "State_TotalBookedSeats": 4,
-                "State_TotalShows": 6,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.54,
-                "Cities": {
-                    "Sultanpur": {
-                        "City_TotalRevenue": 720.0,
-                        "City_TotalSeats": 186,
-                        "City_TotalBookedSeats": 4,
-                        "City_TotalShows": 2,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 2.15,
-                        "Venues": {
-                            "VKNS - VKNS Cinemas: Sultanpur": {
-                                "Venue_TotalRevenue": 720.0,
-                                "Venue_TotalSeats": 186,
-                                "Venue_TotalBookedSeats": 4,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 2.15
-                            }
-                        }
-                    },
-                    "Azamgarh": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 550,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SCAH - Sanmax Cinemas: Azamgarh": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 550,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Goa": {
-                "State_TotalRevenue": 920.0,
-                "State_TotalSeats": 584,
-                "State_TotalBookedSeats": 10,
-                "State_TotalShows": 4,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 1.71,
-                "Cities": {
-                    "Goa": {
-                        "City_TotalRevenue": 920.0,
-                        "City_TotalSeats": 584,
-                        "City_TotalBookedSeats": 10,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 1.71,
-                        "Venues": {
-                            "INOA - INOX: Osia A Wing Margao, Goa": {
-                                "Venue_TotalRevenue": 920.0,
-                                "Venue_TotalSeats": 584,
-                                "Venue_TotalBookedSeats": 10,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 1.71
-                            }
-                        }
-                    }
-                }
-            },
-            "Assam": {
-                "State_TotalRevenue": 18640.0,
-                "State_TotalSeats": 3108,
-                "State_TotalBookedSeats": 60,
-                "State_TotalShows": 6,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 1.93,
-                "Cities": {
-                    "Tinsukia": {
-                        "City_TotalRevenue": 18640.0,
-                        "City_TotalSeats": 3108,
-                        "City_TotalBookedSeats": 60,
-                        "City_TotalShows": 6,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 1.93,
-                        "Venues": {
-                            "RCTS - Rangghar Cinema: Tinsukia": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 2524,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            },
-                            "GCTI - Galleria Cinemas: ATC Mall, Tinsukia": {
-                                "Venue_TotalRevenue": 18640.0,
-                                "Venue_TotalSeats": 584,
-                                "Venue_TotalBookedSeats": 60,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 10.27
-                            }
-                        }
-                    }
-                }
-            },
-            "Rajasthan": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 268,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 4,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Sirohi": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 268,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SLTA - Sai Laxmi Theatre: Sirohi": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 268,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Maharashtra": {
-                "State_TotalRevenue": 8860.0,
-                "State_TotalSeats": 2440,
-                "State_TotalBookedSeats": 118,
-                "State_TotalShows": 8,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 4.84,
-                "Cities": {
-                    "Bhandara": {
-                        "City_TotalRevenue": 8860.0,
-                        "City_TotalSeats": 2440,
-                        "City_TotalBookedSeats": 118,
-                        "City_TotalShows": 8,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 4.84,
-                        "Venues": {
-                            "AASH - Adarsh Chitra Mandir: Bhandara": {
-                                "Venue_TotalRevenue": 8860.0,
-                                "Venue_TotalSeats": 1992,
-                                "Venue_TotalBookedSeats": 118,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 5.92
-                            },
-                            "ACXB - AR Cineplex: Bhandara": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 448,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "O' Romeo - Hindi": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/o-romeo-et00481091-1772498394.jpg",
-        "Overall_TotalRevenue": 35520.0,
-        "Overall_TotalSeats": 4887,
-        "Overall_TotalBookedSeats": 238,
-        "Overall_TotalShows": 31,
-        "Overall_SoldOutShows": 0,
-        "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 4.87,
-        "Locations": {
-            "Gujarat": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 940,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 11,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Junagadh": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 360,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SCJG - Suraj Cineplex: Junagadh": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 360,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Gandhinagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 108,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 2,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 108,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Himmatnagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 304,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 2,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "NXTM - NXT Cinemas: Nr. Salal, Himmatnagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 304,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Visnagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 168,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 3,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SCSZ - Sanelite Cinemas: Sarthak Square, Visnagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 168,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 3,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Bihar": {
-                "State_TotalRevenue": 35160.0,
-                "State_TotalSeats": 2066,
-                "State_TotalBookedSeats": 236,
-                "State_TotalShows": 8,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 11.42,
-                "Cities": {
-                    "Hajipur": {
-                        "City_TotalRevenue": 35160.0,
-                        "City_TotalSeats": 2066,
-                        "City_TotalBookedSeats": 236,
-                        "City_TotalShows": 8,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 11.42,
-                        "Venues": {
-                            "NCHJ - Navin Cinema: Hajipur": {
-                                "Venue_TotalRevenue": 4710.0,
-                                "Venue_TotalSeats": 950,
-                                "Venue_TotalBookedSeats": 33,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 3.47
-                            },
-                            "DDCK - DD Cinemas: Cine Krishna Mall, Hajipur": {
-                                "Venue_TotalRevenue": 30450.0,
-                                "Venue_TotalSeats": 1116,
-                                "Venue_TotalBookedSeats": 203,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 18.19
-                            }
-                        }
-                    }
-                }
-            },
-            "Madhya Pradesh": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 150,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 1,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Mandla": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 150,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 1,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "KIGH - Kingfisher Multiplex: Mandla": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 150,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 1,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Uttar Pradesh": {
-                "State_TotalRevenue": 360.0,
-                "State_TotalSeats": 1535,
-                "State_TotalBookedSeats": 2,
-                "State_TotalShows": 9,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.13,
-                "Cities": {
-                    "Sultanpur": {
-                        "City_TotalRevenue": 360.0,
-                        "City_TotalSeats": 835,
-                        "City_TotalBookedSeats": 2,
-                        "City_TotalShows": 5,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.24,
-                        "Venues": {
-                            "SDDP - Shubham DD Plex: Sultanpur": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 742,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            },
-                            "VKNS - VKNS Cinemas: Sultanpur": {
-                                "Venue_TotalRevenue": 360.0,
-                                "Venue_TotalSeats": 93,
-                                "Venue_TotalBookedSeats": 2,
-                                "Venue_TotalShows": 1,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 2.15
-                            }
-                        }
-                    },
-                    "Azamgarh": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 700,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "MUTA - Murli DD Cinemas: Azmagarh": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 444,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            },
-                            "SCAH - Sanmax Cinemas: Azamgarh": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 256,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Goa": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 196,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 2,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Goa": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 196,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 2,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "INOA - INOX: Osia A Wing Margao, Goa": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 196,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "Lagan Laagii Re - Gujarati": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/lagan-laagii-re-et00480946-1767949198.jpg",
-        "Overall_TotalRevenue": 0.0,
-        "Overall_TotalSeats": 1174,
-        "Overall_TotalBookedSeats": 0,
-        "Overall_TotalShows": 5,
-        "Overall_SoldOutShows": 0,
-        "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 0.0,
-        "Locations": {
-            "Gujarat": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 1174,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 5,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Junagadh": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 1152,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SCJG - Suraj Cineplex: Junagadh": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 1152,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Gandhinagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 22,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 1,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 22,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 1,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "Border 2 - Hindi": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/border-2-et00401449-1768546422.jpg",
-        "Overall_TotalRevenue": 198160.0,
-        "Overall_TotalSeats": 1357,
-        "Overall_TotalBookedSeats": 741,
-        "Overall_TotalShows": 11,
-        "Overall_SoldOutShows": 3,
-        "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 54.61,
-        "Locations": {
-            "Gujarat": {
-                "State_TotalRevenue": 198160.0,
-                "State_TotalSeats": 811,
-                "State_TotalBookedSeats": 741,
-                "State_TotalShows": 6,
-                "State_SoldOutShows": 3,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 91.37,
-                "Cities": {
-                    "Junagadh": {
-                        "City_TotalRevenue": 198160.0,
-                        "City_TotalSeats": 741,
-                        "City_TotalBookedSeats": 741,
-                        "City_TotalShows": 3,
-                        "City_SoldOutShows": 3,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 100.0,
-                        "Venues": {
-                            "SCJG - Suraj Cineplex: Junagadh": {
-                                "Venue_TotalRevenue": 198160.0,
-                                "Venue_TotalSeats": 741,
-                                "Venue_TotalBookedSeats": 741,
-                                "Venue_TotalShows": 3,
-                                "Venue_SoldOutShows": 3,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 100.0
-                            }
-                        }
-                    },
-                    "Gandhinagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 22,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 1,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 22,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 1,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Visnagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 48,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 2,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SCSZ - Sanelite Cinemas: Sarthak Square, Visnagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 48,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Madhya Pradesh": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 150,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 1,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Mandla": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 150,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 1,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "KIGH - Kingfisher Multiplex: Mandla": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 150,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 1,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            },
-            "Himachal Pradesh": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 396,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 4,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Palampur": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 396,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "YAST - Yaashitaa Multiplex: Palampur": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 396,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
+                                "Venue_OccupancyPercentage": 2.64
                             }
                         }
                     }
@@ -881,280 +44,40 @@
     },
     "Sampradayini Suppini Suddapoosani - Telugu": {
         "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/sampradayini-suppini-suddapoosani-et00488070-1772778397.jpg",
-        "Overall_TotalRevenue": 100.0,
+        "Overall_TotalRevenue": 4500.0,
         "Overall_TotalSeats": 1496,
-        "Overall_TotalBookedSeats": 1,
+        "Overall_TotalBookedSeats": 45,
         "Overall_TotalShows": 4,
         "Overall_SoldOutShows": 0,
         "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 0.07,
+        "Overall_OccupancyPercentage": 3.01,
         "Locations": {
             "Andhra Pradesh": {
-                "State_TotalRevenue": 100.0,
+                "State_TotalRevenue": 4500.0,
                 "State_TotalSeats": 1496,
-                "State_TotalBookedSeats": 1,
+                "State_TotalBookedSeats": 45,
                 "State_TotalShows": 4,
                 "State_SoldOutShows": 0,
                 "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.07,
+                "State_OccupancyPercentage": 3.01,
                 "Cities": {
                     "Giddalur": {
-                        "City_TotalRevenue": 100.0,
+                        "City_TotalRevenue": 4500.0,
                         "City_TotalSeats": 1496,
-                        "City_TotalBookedSeats": 1,
+                        "City_TotalBookedSeats": 45,
                         "City_TotalShows": 4,
                         "City_SoldOutShows": 0,
                         "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.07,
+                        "City_OccupancyPercentage": 3.01,
                         "Venues": {
                             "SNVG - Srinivasa Theater: Giddalur": {
-                                "Venue_TotalRevenue": 100.0,
+                                "Venue_TotalRevenue": 4500.0,
                                 "Venue_TotalSeats": 1496,
-                                "Venue_TotalBookedSeats": 1,
+                                "Venue_TotalBookedSeats": 45,
                                 "Venue_TotalShows": 4,
                                 "Venue_SoldOutShows": 0,
                                 "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.07
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "Dhurandhar The Revenge - Hindi": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/dhurandhar-the-revenge-et00478890-1772893614.jpg",
-        "Overall_TotalRevenue": 57504.0,
-        "Overall_TotalSeats": 1532,
-        "Overall_TotalBookedSeats": 244,
-        "Overall_TotalShows": 6,
-        "Overall_SoldOutShows": 1,
-        "Overall_FastFillingShows": 1,
-        "Overall_OccupancyPercentage": 15.93,
-        "Locations": {
-            "Uttar Pradesh": {
-                "State_TotalRevenue": 51309.0,
-                "State_TotalSeats": 384,
-                "State_TotalBookedSeats": 191,
-                "State_TotalShows": 4,
-                "State_SoldOutShows": 1,
-                "State_FastFillingShows": 1,
-                "State_OccupancyPercentage": 49.74,
-                "Cities": {
-                    "Shamli": {
-                        "City_TotalRevenue": 51309.0,
-                        "City_TotalSeats": 384,
-                        "City_TotalBookedSeats": 191,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 1,
-                        "City_FastFillingShows": 1,
-                        "City_OccupancyPercentage": 49.74,
-                        "Venues": {
-                            "ACSI - Adhiraj Cinemas: Shamli": {
-                                "Venue_TotalRevenue": 51309.0,
-                                "Venue_TotalSeats": 384,
-                                "Venue_TotalBookedSeats": 191,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 1,
-                                "Venue_FastFillingShows": 1,
-                                "Venue_OccupancyPercentage": 49.74
-                            }
-                        }
-                    }
-                }
-            },
-            "Kerala": {
-                "State_TotalRevenue": 6195.0,
-                "State_TotalSeats": 1148,
-                "State_TotalBookedSeats": 53,
-                "State_TotalShows": 2,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 4.62,
-                "Cities": {
-                    "Thalayolaparambu": {
-                        "City_TotalRevenue": 6195.0,
-                        "City_TotalSeats": 1148,
-                        "City_TotalBookedSeats": 53,
-                        "City_TotalShows": 2,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 4.62,
-                        "Venues": {
-                            "MYCT - MY Cinemas: Thalayolaparambu, Kerala": {
-                                "Venue_TotalRevenue": 6195.0,
-                                "Venue_TotalSeats": 1148,
-                                "Venue_TotalBookedSeats": 53,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 4.62
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "Eklo Rabari - Gujarati": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/eklo-rabari-et00486728-1772430472.jpg",
-        "Overall_TotalRevenue": 0.0,
-        "Overall_TotalSeats": 278,
-        "Overall_TotalBookedSeats": 0,
-        "Overall_TotalShows": 6,
-        "Overall_SoldOutShows": 0,
-        "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 0.0,
-        "Locations": {
-            "Gujarat": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 278,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 6,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Kalol (Gandhinagar)": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 200,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SMKL - Sanskruti Movieplex: Kalol": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 200,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Gandhinagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 54,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 1,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 54,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 1,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Visnagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 24,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 1,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SCSZ - Sanelite Cinemas: Sarthak Square, Visnagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 24,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 1,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "Tu Duniya Chhe Mari - Gujarati": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/tu-duniya-chhe-mari-et00488966-1771998545.jpg",
-        "Overall_TotalRevenue": 0.0,
-        "Overall_TotalSeats": 966,
-        "Overall_TotalBookedSeats": 0,
-        "Overall_TotalShows": 7,
-        "Overall_SoldOutShows": 0,
-        "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 0.0,
-        "Locations": {
-            "Gujarat": {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 966,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 7,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {
-                    "Kalol (Gandhinagar)": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 800,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SMKL - Sanskruti Movieplex: Kalol": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 800,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Gandhinagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 110,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 2,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 110,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 2,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Visnagar": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 56,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 1,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "SCSZ - Sanelite Cinemas: Sarthak Square, Visnagar": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 56,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 1,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
+                                "Venue_OccupancyPercentage": 3.01
                             }
                         }
                     }
@@ -1205,223 +128,12 @@
             }
         }
     },
-    "They Call Him OG - Telugu": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/they-call-him-og-et00369074-1758290791.jpg",
-        "Overall_TotalRevenue": 2200.0,
-        "Overall_TotalSeats": 1668,
-        "Overall_TotalBookedSeats": 44,
-        "Overall_TotalShows": 4,
-        "Overall_SoldOutShows": 0,
-        "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 2.64,
-        "Locations": {
-            "Andhra Pradesh": {
-                "State_TotalRevenue": 2200.0,
-                "State_TotalSeats": 1668,
-                "State_TotalBookedSeats": 44,
-                "State_TotalShows": 4,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 2.64,
-                "Cities": {
-                    "Giddalur": {
-                        "City_TotalRevenue": 2200.0,
-                        "City_TotalSeats": 1668,
-                        "City_TotalBookedSeats": 44,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 2.64,
-                        "Venues": {
-                            "KRGD - Krishna Theater: Giddalur": {
-                                "Venue_TotalRevenue": 2200.0,
-                                "Venue_TotalSeats": 1668,
-                                "Venue_TotalBookedSeats": 44,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 2.64
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "Thaai Kizhavi - Tamil": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thaai-kizhavi-et00488859-1771931113.jpg",
-        "Overall_TotalRevenue": 474365.0,
-        "Overall_TotalSeats": 21174,
-        "Overall_TotalBookedSeats": 2735,
-        "Overall_TotalShows": 39,
-        "Overall_SoldOutShows": 0,
-        "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 12.92,
-        "Locations": {
-            "Tamil Nadu": {
-                "State_TotalRevenue": 472340.0,
-                "State_TotalSeats": 19908,
-                "State_TotalBookedSeats": 2720,
-                "State_TotalShows": 36,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 13.66,
-                "Cities": {
-                    "Vellakoil": {
-                        "City_TotalRevenue": 900.0,
-                        "City_TotalSeats": 1664,
-                        "City_TotalBookedSeats": 6,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.36,
-                        "Venues": {
-                            "VCKV - Veera Cinemas A/C 4K Dolby Atmos: Vellakoil": {
-                                "Venue_TotalRevenue": 900.0,
-                                "Venue_TotalSeats": 1664,
-                                "Venue_TotalBookedSeats": 6,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.36
-                            }
-                        }
-                    },
-                    "Lalgudi": {
-                        "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 1504,
-                        "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 0.0,
-                        "Venues": {
-                            "ANCL - Anbu Cinemas A/C 7.1: Lalgudi": {
-                                "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 1504,
-                                "Venue_TotalBookedSeats": 0,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.0
-                            }
-                        }
-                    },
-                    "Trichy": {
-                        "City_TotalRevenue": 471440.0,
-                        "City_TotalSeats": 16740,
-                        "City_TotalBookedSeats": 2714,
-                        "City_TotalShows": 28,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 16.21,
-                        "Venues": {
-                            "RAMB - Ramba A/C RGB Laser Dolby Atmos: Trichy": {
-                                "Venue_TotalRevenue": 42750.0,
-                                "Venue_TotalSeats": 2952,
-                                "Venue_TotalBookedSeats": 285,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 9.65
-                            },
-                            "CVCT - Cauvery Cinemas 4K RGB LASER: Trichy": {
-                                "Venue_TotalRevenue": 6600.0,
-                                "Venue_TotalSeats": 2224,
-                                "Venue_TotalBookedSeats": 44,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 1.98
-                            },
-                            "BHEL - BHELEC Cinema A/C Dolby 7.1: Trichy": {
-                                "Venue_TotalRevenue": 2250.0,
-                                "Venue_TotalSeats": 1780,
-                                "Venue_TotalBookedSeats": 15,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.84
-                            },
-                            "SHCT - Shanthi Cinemas A/C 4K DOLBY ATMOS: Thiruverumbur": {
-                                "Venue_TotalRevenue": 600.0,
-                                "Venue_TotalSeats": 1476,
-                                "Venue_TotalBookedSeats": 4,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 0.27
-                            },
-                            "TGMS - Megastar Cinemas: Premium Large Format DOLBY ATMOS": {
-                                "Venue_TotalRevenue": 91350.0,
-                                "Venue_TotalSeats": 2920,
-                                "Venue_TotalBookedSeats": 609,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 20.86
-                            },
-                            "LATG - LA CINEMA MARIS COMPLEX RGB LASER: TRICHY": {
-                                "Venue_TotalRevenue": 286580.0,
-                                "Venue_TotalSeats": 3556,
-                                "Venue_TotalBookedSeats": 1514,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 42.58
-                            },
-                            "SMTY - LA Cinema Sona Mina RGB Laser: Trichy": {
-                                "Venue_TotalRevenue": 41310.0,
-                                "Venue_TotalSeats": 1832,
-                                "Venue_TotalBookedSeats": 243,
-                                "Venue_TotalShows": 4,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 13.26
-                            }
-                        }
-                    }
-                }
-            },
-            "Kerala": {
-                "State_TotalRevenue": 2025.0,
-                "State_TotalSeats": 1266,
-                "State_TotalBookedSeats": 15,
-                "State_TotalShows": 3,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 1.18,
-                "Cities": {
-                    "Kottayam": {
-                        "City_TotalRevenue": 2025.0,
-                        "City_TotalSeats": 1266,
-                        "City_TotalBookedSeats": 15,
-                        "City_TotalShows": 3,
-                        "City_SoldOutShows": 0,
-                        "City_FastFillingShows": 0,
-                        "City_OccupancyPercentage": 1.18,
-                        "Venues": {
-                            "ATKY - Anaswara Theatre 2K Triple Beam 3D: Kottayam": {
-                                "Venue_TotalRevenue": 2025.0,
-                                "Venue_TotalSeats": 1266,
-                                "Venue_TotalBookedSeats": 15,
-                                "Venue_TotalShows": 3,
-                                "Venue_SoldOutShows": 0,
-                                "Venue_FastFillingShows": 0,
-                                "Venue_OccupancyPercentage": 1.18
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
     "Mension House Mallesh - Telugu": {
         "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mension-house-mallesh-et00489780-1772440748.jpg",
         "Overall_TotalRevenue": 0.0,
-        "Overall_TotalSeats": 1248,
+        "Overall_TotalSeats": 596,
         "Overall_TotalBookedSeats": 0,
-        "Overall_TotalShows": 8,
+        "Overall_TotalShows": 4,
         "Overall_SoldOutShows": 0,
         "Overall_FastFillingShows": 0,
         "Overall_OccupancyPercentage": 0.0,
@@ -1456,30 +168,190 @@
                         }
                     }
                 }
-            },
-            "Andhra Pradesh": {
+            }
+        }
+    },
+    "The Kerala Story 2: Goes Beyond - Hindi": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/the-kerala-story-2-goes-beyond-et00484171-1770209319.jpg",
+        "Overall_TotalRevenue": 14560.0,
+        "Overall_TotalSeats": 1240,
+        "Overall_TotalBookedSeats": 104,
+        "Overall_TotalShows": 11,
+        "Overall_SoldOutShows": 0,
+        "Overall_FastFillingShows": 0,
+        "Overall_OccupancyPercentage": 8.39,
+        "Locations": {
+            "Gujarat": {
                 "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 652,
+                "State_TotalSeats": 356,
                 "State_TotalBookedSeats": 0,
-                "State_TotalShows": 4,
+                "State_TotalShows": 7,
                 "State_SoldOutShows": 0,
                 "State_FastFillingShows": 0,
                 "State_OccupancyPercentage": 0.0,
                 "Cities": {
-                    "Pamarru": {
+                    "Gandhinagar": {
                         "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 652,
+                        "City_TotalSeats": 356,
                         "City_TotalBookedSeats": 0,
-                        "City_TotalShows": 4,
+                        "City_TotalShows": 7,
                         "City_SoldOutShows": 0,
                         "City_FastFillingShows": 0,
                         "City_OccupancyPercentage": 0.0,
                         "Venues": {
-                            "SRPM - Sivaram Theater: Pamarru": {
+                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
                                 "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 652,
+                                "Venue_TotalSeats": 356,
                                 "Venue_TotalBookedSeats": 0,
+                                "Venue_TotalShows": 7,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 0.0
+                            }
+                        }
+                    }
+                }
+            },
+            "Bihar": {
+                "State_TotalRevenue": 14560.0,
+                "State_TotalSeats": 884,
+                "State_TotalBookedSeats": 104,
+                "State_TotalShows": 4,
+                "State_SoldOutShows": 0,
+                "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 11.76,
+                "Cities": {
+                    "Hajipur": {
+                        "City_TotalRevenue": 14560.0,
+                        "City_TotalSeats": 884,
+                        "City_TotalBookedSeats": 104,
+                        "City_TotalShows": 4,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 11.76,
+                        "Venues": {
+                            "DDCK - DD Cinemas: Cine Krishna Mall, Hajipur": {
+                                "Venue_TotalRevenue": 14560.0,
+                                "Venue_TotalSeats": 884,
+                                "Venue_TotalBookedSeats": 104,
                                 "Venue_TotalShows": 4,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 11.76
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "O' Romeo - Hindi": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/o-romeo-et00481091-1772498394.jpg",
+        "Overall_TotalRevenue": 15450.0,
+        "Overall_TotalSeats": 1224,
+        "Overall_TotalBookedSeats": 103,
+        "Overall_TotalShows": 6,
+        "Overall_SoldOutShows": 0,
+        "Overall_FastFillingShows": 0,
+        "Overall_OccupancyPercentage": 8.42,
+        "Locations": {
+            "Gujarat": {
+                "State_TotalRevenue": 0.0,
+                "State_TotalSeats": 108,
+                "State_TotalBookedSeats": 0,
+                "State_TotalShows": 2,
+                "State_SoldOutShows": 0,
+                "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 0.0,
+                "Cities": {
+                    "Gandhinagar": {
+                        "City_TotalRevenue": 0.0,
+                        "City_TotalSeats": 108,
+                        "City_TotalBookedSeats": 0,
+                        "City_TotalShows": 2,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 0.0,
+                        "Venues": {
+                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
+                                "Venue_TotalRevenue": 0.0,
+                                "Venue_TotalSeats": 108,
+                                "Venue_TotalBookedSeats": 0,
+                                "Venue_TotalShows": 2,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 0.0
+                            }
+                        }
+                    }
+                }
+            },
+            "Bihar": {
+                "State_TotalRevenue": 15450.0,
+                "State_TotalSeats": 1116,
+                "State_TotalBookedSeats": 103,
+                "State_TotalShows": 4,
+                "State_SoldOutShows": 0,
+                "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 9.23,
+                "Cities": {
+                    "Hajipur": {
+                        "City_TotalRevenue": 15450.0,
+                        "City_TotalSeats": 1116,
+                        "City_TotalBookedSeats": 103,
+                        "City_TotalShows": 4,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 9.23,
+                        "Venues": {
+                            "DDCK - DD Cinemas: Cine Krishna Mall, Hajipur": {
+                                "Venue_TotalRevenue": 15450.0,
+                                "Venue_TotalSeats": 1116,
+                                "Venue_TotalBookedSeats": 103,
+                                "Venue_TotalShows": 4,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 9.23
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Border 2 - Hindi": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/border-2-et00401449-1768546422.jpg",
+        "Overall_TotalRevenue": 0.0,
+        "Overall_TotalSeats": 22,
+        "Overall_TotalBookedSeats": 0,
+        "Overall_TotalShows": 1,
+        "Overall_SoldOutShows": 0,
+        "Overall_FastFillingShows": 0,
+        "Overall_OccupancyPercentage": 0.0,
+        "Locations": {
+            "Gujarat": {
+                "State_TotalRevenue": 0.0,
+                "State_TotalSeats": 22,
+                "State_TotalBookedSeats": 0,
+                "State_TotalShows": 1,
+                "State_SoldOutShows": 0,
+                "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 0.0,
+                "Cities": {
+                    "Gandhinagar": {
+                        "City_TotalRevenue": 0.0,
+                        "City_TotalSeats": 22,
+                        "City_TotalBookedSeats": 0,
+                        "City_TotalShows": 1,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 0.0,
+                        "Venues": {
+                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
+                                "Venue_TotalRevenue": 0.0,
+                                "Venue_TotalSeats": 22,
+                                "Venue_TotalBookedSeats": 0,
+                                "Venue_TotalShows": 1,
                                 "Venue_SoldOutShows": 0,
                                 "Venue_FastFillingShows": 0,
                                 "Venue_OccupancyPercentage": 0.0
@@ -1490,37 +362,123 @@
             }
         }
     },
-    "Sonu Ke Titu Ki Sweety - Hindi": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/sonu-ke-titu-ki-sweety-et00058565-22-10-2020-07-23-11.jpg",
+    "Laagni No Melo - Gujarati": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/laagni-no-melo-et00486052-1770639543.jpg",
         "Overall_TotalRevenue": 0.0,
-        "Overall_TotalSeats": 300,
+        "Overall_TotalSeats": 22,
+        "Overall_TotalBookedSeats": 0,
+        "Overall_TotalShows": 1,
+        "Overall_SoldOutShows": 0,
+        "Overall_FastFillingShows": 0,
+        "Overall_OccupancyPercentage": 0.0,
+        "Locations": {
+            "Gujarat": {
+                "State_TotalRevenue": 0.0,
+                "State_TotalSeats": 22,
+                "State_TotalBookedSeats": 0,
+                "State_TotalShows": 1,
+                "State_SoldOutShows": 0,
+                "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 0.0,
+                "Cities": {
+                    "Gandhinagar": {
+                        "City_TotalRevenue": 0.0,
+                        "City_TotalSeats": 22,
+                        "City_TotalBookedSeats": 0,
+                        "City_TotalShows": 1,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 0.0,
+                        "Venues": {
+                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
+                                "Venue_TotalRevenue": 0.0,
+                                "Venue_TotalSeats": 22,
+                                "Venue_TotalBookedSeats": 0,
+                                "Venue_TotalShows": 1,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 0.0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Eklo Rabari - Gujarati": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/eklo-rabari-et00486728-1772430472.jpg",
+        "Overall_TotalRevenue": 0.0,
+        "Overall_TotalSeats": 54,
+        "Overall_TotalBookedSeats": 0,
+        "Overall_TotalShows": 1,
+        "Overall_SoldOutShows": 0,
+        "Overall_FastFillingShows": 0,
+        "Overall_OccupancyPercentage": 0.0,
+        "Locations": {
+            "Gujarat": {
+                "State_TotalRevenue": 0.0,
+                "State_TotalSeats": 54,
+                "State_TotalBookedSeats": 0,
+                "State_TotalShows": 1,
+                "State_SoldOutShows": 0,
+                "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 0.0,
+                "Cities": {
+                    "Gandhinagar": {
+                        "City_TotalRevenue": 0.0,
+                        "City_TotalSeats": 54,
+                        "City_TotalBookedSeats": 0,
+                        "City_TotalShows": 1,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 0.0,
+                        "Venues": {
+                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
+                                "Venue_TotalRevenue": 0.0,
+                                "Venue_TotalSeats": 54,
+                                "Venue_TotalBookedSeats": 0,
+                                "Venue_TotalShows": 1,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 0.0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Tu Duniya Chhe Mari - Gujarati": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/tu-duniya-chhe-mari-et00488966-1771998545.jpg",
+        "Overall_TotalRevenue": 0.0,
+        "Overall_TotalSeats": 110,
         "Overall_TotalBookedSeats": 0,
         "Overall_TotalShows": 2,
         "Overall_SoldOutShows": 0,
         "Overall_FastFillingShows": 0,
         "Overall_OccupancyPercentage": 0.0,
         "Locations": {
-            "Madhya Pradesh": {
+            "Gujarat": {
                 "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 300,
+                "State_TotalSeats": 110,
                 "State_TotalBookedSeats": 0,
                 "State_TotalShows": 2,
                 "State_SoldOutShows": 0,
                 "State_FastFillingShows": 0,
                 "State_OccupancyPercentage": 0.0,
                 "Cities": {
-                    "Mandla": {
+                    "Gandhinagar": {
                         "City_TotalRevenue": 0.0,
-                        "City_TotalSeats": 300,
+                        "City_TotalSeats": 110,
                         "City_TotalBookedSeats": 0,
                         "City_TotalShows": 2,
                         "City_SoldOutShows": 0,
                         "City_FastFillingShows": 0,
                         "City_OccupancyPercentage": 0.0,
                         "Venues": {
-                            "KIGH - Kingfisher Multiplex: Mandla": {
+                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
                                 "Venue_TotalRevenue": 0.0,
-                                "Venue_TotalSeats": 300,
+                                "Venue_TotalSeats": 110,
                                 "Venue_TotalBookedSeats": 0,
                                 "Venue_TotalShows": 2,
                                 "Venue_SoldOutShows": 0,
@@ -1533,23 +491,133 @@
             }
         }
     },
-    "Na Jaane Kaun Aa Gaya - Hindi": {
-        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/na-jaane-kaun-aa-gaya-et00486882-1773042212.jpg",
-        "Overall_TotalRevenue": 6200.0,
-        "Overall_TotalSeats": 218,
-        "Overall_TotalBookedSeats": 24,
+    "Ka Kha Ga Gha - Gujarati": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ka-kha-ga-gha-et00486198-1770702088.jpg",
+        "Overall_TotalRevenue": 0.0,
+        "Overall_TotalSeats": 22,
+        "Overall_TotalBookedSeats": 0,
         "Overall_TotalShows": 1,
         "Overall_SoldOutShows": 0,
         "Overall_FastFillingShows": 0,
-        "Overall_OccupancyPercentage": 11.01,
+        "Overall_OccupancyPercentage": 0.0,
         "Locations": {
-            "Uttarakhand": {
-                "State_TotalRevenue": 6200.0,
-                "State_TotalSeats": 218,
-                "State_TotalBookedSeats": 24,
+            "Gujarat": {
+                "State_TotalRevenue": 0.0,
+                "State_TotalSeats": 22,
+                "State_TotalBookedSeats": 0,
                 "State_TotalShows": 1,
                 "State_SoldOutShows": 0,
                 "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 11.01,
+                "State_OccupancyPercentage": 0.0,
                 "Cities": {
-                    "Nainital": {
+                    "Gandhinagar": {
+                        "City_TotalRevenue": 0.0,
+                        "City_TotalSeats": 22,
+                        "City_TotalBookedSeats": 0,
+                        "City_TotalShows": 1,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 0.0,
+                        "Venues": {
+                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
+                                "Venue_TotalRevenue": 0.0,
+                                "Venue_TotalSeats": 22,
+                                "Venue_TotalBookedSeats": 0,
+                                "Venue_TotalShows": 1,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 0.0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Lagan Laagii Re - Gujarati": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/lagan-laagii-re-et00480946-1767949198.jpg",
+        "Overall_TotalRevenue": 0.0,
+        "Overall_TotalSeats": 22,
+        "Overall_TotalBookedSeats": 0,
+        "Overall_TotalShows": 1,
+        "Overall_SoldOutShows": 0,
+        "Overall_FastFillingShows": 0,
+        "Overall_OccupancyPercentage": 0.0,
+        "Locations": {
+            "Gujarat": {
+                "State_TotalRevenue": 0.0,
+                "State_TotalSeats": 22,
+                "State_TotalBookedSeats": 0,
+                "State_TotalShows": 1,
+                "State_SoldOutShows": 0,
+                "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 0.0,
+                "Cities": {
+                    "Gandhinagar": {
+                        "City_TotalRevenue": 0.0,
+                        "City_TotalSeats": 22,
+                        "City_TotalBookedSeats": 0,
+                        "City_TotalShows": 1,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 0.0,
+                        "Venues": {
+                            "SNCR - Sanelite Cinemas (Pethapur): Gandhinagar": {
+                                "Venue_TotalRevenue": 0.0,
+                                "Venue_TotalSeats": 22,
+                                "Venue_TotalBookedSeats": 0,
+                                "Venue_TotalShows": 1,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 0.0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Mrithyunjay - Telugu": {
+        "Poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mrithyunjay-et00487296-1772690068.jpg",
+        "Overall_TotalRevenue": 0.0,
+        "Overall_TotalSeats": 1232,
+        "Overall_TotalBookedSeats": 0,
+        "Overall_TotalShows": 4,
+        "Overall_SoldOutShows": 0,
+        "Overall_FastFillingShows": 0,
+        "Overall_OccupancyPercentage": 0.0,
+        "Locations": {
+            "Andhra Pradesh": {
+                "State_TotalRevenue": 0.0,
+                "State_TotalSeats": 1232,
+                "State_TotalBookedSeats": 0,
+                "State_TotalShows": 4,
+                "State_SoldOutShows": 0,
+                "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 0.0,
+                "Cities": {
+                    "Jangareddy Gudem": {
+                        "City_TotalRevenue": 0.0,
+                        "City_TotalSeats": 1232,
+                        "City_TotalBookedSeats": 0,
+                        "City_TotalShows": 4,
+                        "City_SoldOutShows": 0,
+                        "City_FastFillingShows": 0,
+                        "City_OccupancyPercentage": 0.0,
+                        "Venues": {
+                            "SLJJ - Sri Lakshmi Talkies A/c 2K Dolby: Jangareddy Gudem": {
+                                "Venue_TotalRevenue": 0.0,
+                                "Venue_TotalSeats": 1232,
+                                "Venue_TotalBookedSeats": 0,
+                                "Venue_TotalShows": 4,
+                                "Venue_SoldOutShows": 0,
+                                "Venue_FastFillingShows": 0,
+                                "Venue_OccupancyPercentage": 0.0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

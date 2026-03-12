@@ -1,4 +1,5 @@
-name: Hourly BookMyShow Scraper
+# .github/workflows/scrape.yml
+name: BMS Hourly Scraper
 
 on:
   schedule:
@@ -8,68 +9,33 @@ on:
 permissions:
   contents: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        # 20 Parallel Servers!
-        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    timeout-minutes: 55
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: pip install curl_cffi
 
-      - name: Run Scraper Shard
-        env:
-          TOTAL_SHARDS: 20
-          SHARD_INDEX: ${{ matrix.shard }}
+      - name: Run scraper
         run: python BMS_REVENUEP_VENUE.py
 
-      # Instead of committing immediately, temporarily upload the shard file
-      - name: Upload Shard Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: shard-${{ matrix.shard }}
-          path: '*_data_shard_*.json'
-          retention-days: 1
-
-  # This job waits for all 20 scrapers to finish, then merges the data
-  combine:
-    needs: scrape
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      # Download all 20 JSON files into the main directory
-      - name: Download all Shards
-        uses: actions/download-artifact@v4
-        with:
-          pattern: shard-*
-          merge-multiple: true
-
-      - name: Run Merge Script
-        run: python merge_shards.py
-
-      - name: Clean up and Push Data
+      - name: Commit and push data
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          
-          # Add the final merged file
-          git add *_data.json
-          
-          git commit -m "Automated data update (Merged 20 shards)" || echo "No changes to commit"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add *.json
+          git diff --cached --quiet || git commit -m "data: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
