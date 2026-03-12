@@ -1,4 +1,3 @@
-# scraper.py
 import json
 import os
 import time
@@ -10,14 +9,17 @@ from curl_cffi import requests
 
 API_URL = "https://in.bookmyshow.com/api/v2/mobile/showtimes/byvenue"
 
-WORKER_THREADS = 8
+WORKER_THREADS = 20  # Increased — GitHub IPs are fresh every run
 INPUT_FILE = "Venues.json"
 file_lock = threading.Lock()
 
+# Shared rate limit tracker across threads
+rate_limit_lock = threading.Lock()
+last_429_time = 0
+
 
 def get_target_dates():
-    today = datetime.now()
-    return [today.strftime('%Y%m%d')]
+    return [datetime.now().strftime('%Y%m%d')]
 
 
 def load_venues(filepath=INPUT_FILE):
@@ -39,7 +41,24 @@ def generate_poster_url(image_code):
     return f"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/{image_code}.jpg"
 
 
+def smart_sleep():
+    """
+    If any thread recently hit a 429, all threads pause briefly.
+    This prevents the burst that triggers rate limiting.
+    """
+    global last_429_time
+    with rate_limit_lock:
+        time_since_429 = time.time() - last_429_time
+        if time_since_429 < 10:
+            # Recent 429 detected — wait out the cooldown
+            sleep_time = 10 - time_since_429 + random.uniform(1, 3)
+            return sleep_time
+    return random.uniform(0.3, 0.8)  # Normal delay between requests
+
+
 def process_single_venue(venue_item, dates):
+    global last_429_time
+
     if isinstance(venue_item, dict):
         venue_code = venue_item.get("VenueCode")
         venue_name = venue_item.get("VenueName", venue_code)
@@ -66,19 +85,17 @@ def process_single_venue(venue_item, dates):
         "X-Requested-With": "XMLHttpRequest",
     })
 
-    MAX_RETRIES = 6
+    MAX_RETRIES = 8  # Increased retries
     shard_data = {
-        "state": state,
-        "city": city,
-        "venue_code": venue_code,
-        "venue_name": venue_name,
-        "movies": {},
-        "failed_dates": []
+        "state": state, "city": city,
+        "venue_code": venue_code, "venue_name": venue_name,
+        "movies": {}, "failed_dates": []
     }
 
     for date_code in dates:
-        # Throttle before each request to avoid burst 429s
-        time.sleep(random.uniform(1.0, 2.0))
+        # Smart sleep — backs off globally if 429 was recently seen
+        sleep_time = smart_sleep()
+        time.sleep(sleep_time)
 
         data = None
         for attempt in range(MAX_RETRIES):
@@ -94,27 +111,30 @@ def process_single_venue(venue_item, dates):
                     break
 
                 elif response.status_code == 429:
-                    wait_time = (2 ** attempt) + random.uniform(2, 4)
-                    print(f"  ⏳ 429 on {venue_code}, waiting {wait_time:.1f}s (attempt {attempt+1})")
+                    # Signal all threads that rate limit was hit
+                    with rate_limit_lock:
+                        last_429_time = time.time()
+
+                    wait_time = (2 ** attempt) + random.uniform(3, 6)
+                    print(f"  ⏳ 429 on {venue_code}, cooling down {wait_time:.1f}s (attempt {attempt+1})")
                     time.sleep(wait_time)
                     continue
 
-                elif response.status_code in [403, 404, 500, 502, 503]:
+                elif response.status_code in [403, 404]:
+                    break  # No point retrying these
+
+                elif response.status_code in [500, 502, 503]:
                     time.sleep(3)
                     continue
 
-            except Exception as e:
+            except Exception:
                 time.sleep(2)
 
         if not data:
             shard_data["failed_dates"].append(date_code)
             continue
 
-        show_details = data.get("ShowDetails", [])
-        if not show_details:
-            continue
-
-        for detail in show_details:
+        for detail in data.get("ShowDetails", []):
             for event in detail.get("Event", []):
                 for child in event.get("ChildEvents", []):
                     title = child.get("EventName", event.get("EventTitle", "Unknown Title"))
@@ -122,41 +142,29 @@ def process_single_venue(venue_item, dates):
                     if title not in shard_data["movies"]:
                         shard_data["movies"][title] = {
                             "Poster": generate_poster_url(child.get("EventImageCode")),
-                            "TotalRevenue": 0.0,
-                            "TotalSeats": 0,
-                            "TotalBookedSeats": 0,
-                            "TotalShows": 0,
-                            "SoldOutShows": 0,
-                            "FastFillingShows": 0
+                            "TotalRevenue": 0.0, "TotalSeats": 0,
+                            "TotalBookedSeats": 0, "TotalShows": 0,
+                            "SoldOutShows": 0, "FastFillingShows": 0
                         }
 
                     for show in child.get("ShowTimes", []):
-                        show_max_seats = 0
-                        show_booked_seats = 0
-                        show_revenue = 0.0
+                        mx, bk, rev = 0, 0, 0.0
+                        for cat in show.get("Categories", []):
+                            ms = int(cat.get("MaxSeats", 0))
+                            av = int(cat.get("SeatsAvail", 0))
+                            pr = float(cat.get("CurPrice", 0.0))
+                            booked = max(0, ms - av)
+                            mx += ms; bk += booked; rev += booked * pr
 
-                        for category in show.get("Categories", []):
-                            max_seats    = int(category.get("MaxSeats", 0))
-                            avail_seats  = int(category.get("SeatsAvail", 0))
-                            price        = float(category.get("CurPrice", 0.0))
-                            booked_seats = max(0, max_seats - avail_seats)
-
-                            show_max_seats    += max_seats
-                            show_booked_seats += booked_seats
-                            show_revenue      += booked_seats * price
-
-                        if show_max_seats > 0:
+                        if mx > 0:
                             m = shard_data["movies"][title]
-                            m["TotalShows"]       += 1
-                            m["TotalSeats"]       += show_max_seats
-                            m["TotalBookedSeats"] += show_booked_seats
-                            m["TotalRevenue"]     += show_revenue
-
-                            occ = show_booked_seats / show_max_seats
-                            if occ == 1.0:
-                                m["SoldOutShows"] += 1
-                            elif occ >= 0.75:
-                                m["FastFillingShows"] += 1
+                            m["TotalShows"] += 1
+                            m["TotalSeats"] += mx
+                            m["TotalBookedSeats"] += bk
+                            m["TotalRevenue"] += rev
+                            occ = bk / mx
+                            if occ == 1.0: m["SoldOutShows"] += 1
+                            elif occ >= 0.75: m["FastFillingShows"] += 1
 
     session.close()
     return shard_data
@@ -182,61 +190,44 @@ def aggregate(overall_data, shard_result, output_file):
         if title not in overall_data:
             overall_data[title] = {
                 "Poster": metrics["Poster"],
-                "Overall_TotalRevenue": 0.0,
-                "Overall_TotalSeats": 0,
-                "Overall_TotalBookedSeats": 0,
-                "Overall_TotalShows": 0,
-                "Overall_SoldOutShows": 0,
-                "Overall_FastFillingShows": 0,
-                "Overall_OccupancyPercentage": 0.0,
-                "Locations": {}
+                "Overall_TotalRevenue": 0.0, "Overall_TotalSeats": 0,
+                "Overall_TotalBookedSeats": 0, "Overall_TotalShows": 0,
+                "Overall_SoldOutShows": 0, "Overall_FastFillingShows": 0,
+                "Overall_OccupancyPercentage": 0.0, "Locations": {}
             }
-
         mn = overall_data[title]
         add_metrics(mn, "Overall_", metrics)
         locs = mn["Locations"]
 
         if state not in locs:
             locs[state] = {
-                "State_TotalRevenue": 0.0,
-                "State_TotalSeats": 0,
-                "State_TotalBookedSeats": 0,
-                "State_TotalShows": 0,
-                "State_SoldOutShows": 0,
-                "State_FastFillingShows": 0,
-                "State_OccupancyPercentage": 0.0,
-                "Cities": {}
+                "State_TotalRevenue": 0.0, "State_TotalSeats": 0,
+                "State_TotalBookedSeats": 0, "State_TotalShows": 0,
+                "State_SoldOutShows": 0, "State_FastFillingShows": 0,
+                "State_OccupancyPercentage": 0.0, "Cities": {}
             }
         add_metrics(locs[state], "State_", metrics)
 
         cities = locs[state]["Cities"]
         if city not in cities:
             cities[city] = {
-                "City_TotalRevenue": 0.0,
-                "City_TotalSeats": 0,
-                "City_TotalBookedSeats": 0,
-                "City_TotalShows": 0,
-                "City_SoldOutShows": 0,
-                "City_FastFillingShows": 0,
-                "City_OccupancyPercentage": 0.0,
-                "Venues": {}
+                "City_TotalRevenue": 0.0, "City_TotalSeats": 0,
+                "City_TotalBookedSeats": 0, "City_TotalShows": 0,
+                "City_SoldOutShows": 0, "City_FastFillingShows": 0,
+                "City_OccupancyPercentage": 0.0, "Venues": {}
             }
         add_metrics(cities[city], "City_", metrics)
 
         vn = cities[city]["Venues"]
         if venue_key not in vn:
             vn[venue_key] = {
-                "Venue_TotalRevenue": 0.0,
-                "Venue_TotalSeats": 0,
-                "Venue_TotalBookedSeats": 0,
-                "Venue_TotalShows": 0,
-                "Venue_SoldOutShows": 0,
-                "Venue_FastFillingShows": 0,
+                "Venue_TotalRevenue": 0.0, "Venue_TotalSeats": 0,
+                "Venue_TotalBookedSeats": 0, "Venue_TotalShows": 0,
+                "Venue_SoldOutShows": 0, "Venue_FastFillingShows": 0,
                 "Venue_OccupancyPercentage": 0.0
             }
         add_metrics(vn[venue_key], "Venue_", metrics)
 
-    # Auto-save after every venue
     with open(output_file, "w", encoding='utf-8') as f:
         json.dump(overall_data, f, indent=4, ensure_ascii=False)
 
@@ -276,30 +267,29 @@ def fetch_and_aggregate():
 
             try:
                 shard_result = future.result()
-
                 if shard_result:
                     failed_count = len(shard_result["failed_dates"])
                     total_failures += failed_count
                     status = "✅" if failed_count == 0 else f"⚠️ ({failed_count} failed)"
-
                     with file_lock:
                         aggregate(overall_data, shard_result, output_file)
                 else:
                     status = "⏭️ skipped"
+                    shard_result = {"movies": {}}
 
             except Exception as e:
                 status = f"❌ {e}"
                 total_failures += len(dates)
+                shard_result = {"movies": {}}
 
-            elapsed  = time.time() - start_time
-            avg      = elapsed / completed
-            eta      = str(timedelta(seconds=int(avg * (total_venues - completed))))
-            movies   = len(shard_result["movies"]) if shard_result else 0
-            print(f"[{completed}/{total_venues}] {status} {venue_name_log} | 🎬 {movies} movies | ⏱️ ETA: {eta}")
+            elapsed = time.time() - start_time
+            avg     = elapsed / completed
+            eta     = str(timedelta(seconds=int(avg * (total_venues - completed))))
+            print(f"[{completed}/{total_venues}] {status} {venue_name_log} | 🎬 {len(shard_result['movies'])} movies | ⏱️ ETA: {eta}")
 
     print("\n" + "=" * 60)
     print(f"🎯 DONE IN {str(timedelta(seconds=int(time.time() - start_time)))}")
-    print(f"Total Venues : {total_venues}")
+    print(f"Total Venues:   {total_venues}")
     print(f"Total Failures: {total_failures}")
     print("=" * 60)
 
