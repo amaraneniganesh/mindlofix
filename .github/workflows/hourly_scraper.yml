@@ -1,4 +1,3 @@
-# .github/workflows/scrape.yml
 name: BMS Hourly Scraper
 
 on:
@@ -32,7 +31,7 @@ jobs:
         run: playwright install chromium --with-deps
 
       - name: Run scraper
-        run: python BMS_REVENUEP_VENUE.py
+        run: python run.py
 
       - name: Commit and push data
         run: |
