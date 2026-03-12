@@ -25,18 +25,20 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install playwright
+        run: pip install playwright cryptography
 
       - name: Install Chromium
         run: playwright install chromium --with-deps
 
       - name: Run scraper
-        run: python run.py
+        env:
+          SUPER_KEY: ${{ secrets.SUPER_KEY }}
+        run: python "DAILY SALES/run.py"
 
       - name: Commit and push data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add "DAILY SALES/data/"
           git diff --cached --quiet || git commit -m "data: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
