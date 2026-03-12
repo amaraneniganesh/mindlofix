@@ -1,3 +1,4 @@
+# scraper.py
 import json
 import os
 import time
@@ -5,17 +6,13 @@ import random
 import threading
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from curl_cffi import requests
+from playwright.sync_api import sync_playwright
 
 API_URL = "https://in.bookmyshow.com/api/v2/mobile/showtimes/byvenue"
-
-WORKER_THREADS = 20  # Increased — GitHub IPs are fresh every run
+WORKER_THREADS = 15
 INPUT_FILE = "Venues.json"
 file_lock = threading.Lock()
-
-# Shared rate limit tracker across threads
-rate_limit_lock = threading.Lock()
-last_429_time = 0
+thread_local = threading.local()
 
 
 def get_target_dates():
@@ -41,24 +38,56 @@ def generate_poster_url(image_code):
     return f"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/{image_code}.jpg"
 
 
-def smart_sleep():
-    """
-    If any thread recently hit a 429, all threads pause briefly.
-    This prevents the burst that triggers rate limiting.
-    """
-    global last_429_time
-    with rate_limit_lock:
-        time_since_429 = time.time() - last_429_time
-        if time_since_429 < 10:
-            # Recent 429 detected — wait out the cooldown
-            sleep_time = 10 - time_since_429 + random.uniform(1, 3)
-            return sleep_time
-    return random.uniform(0.3, 0.8)  # Normal delay between requests
+def get_thread_context():
+    """Each thread gets its own browser context — isolated, no sharing."""
+    if not hasattr(thread_local, "context"):
+        thread_local.playwright = sync_playwright().start()
+        thread_local.browser = thread_local.playwright.chromium.launch(
+            headless=True,
+            args=[
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled",
+                "--disable-infobars",
+                "--window-size=390,844",
+            ]
+        )
+        thread_local.context = thread_local.browser.new_context(
+            user_agent="Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            viewport={"width": 390, "height": 844},
+            locale="en-IN",
+            timezone_id="Asia/Kolkata",
+            extra_http_headers={
+                "Accept-Language": "en-IN,en;q=0.9,hi;q=0.8",
+                "appVersion": "14.5.1",
+                "os": "Android",
+                "osVersion": "13",
+            }
+        )
+        thread_local.context.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+            Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
+            Object.defineProperty(navigator, 'languages', { get: () => ['en-IN', 'en'] });
+            window.chrome = { runtime: {} };
+        """)
+
+        # Visit BMS once per thread to establish session/cookies
+        page = thread_local.context.new_page()
+        try:
+            page.goto("https://in.bookmyshow.com/", wait_until="domcontentloaded", timeout=30000)
+            time.sleep(2)
+        except:
+            pass
+        finally:
+            page.close()
+
+        print(f"  🌐 Thread browser ready (Thread ID: {threading.get_ident()})")
+
+    return thread_local.context
 
 
 def process_single_venue(venue_item, dates):
-    global last_429_time
-
     if isinstance(venue_item, dict):
         venue_code = venue_item.get("VenueCode")
         venue_name = venue_item.get("VenueName", venue_code)
@@ -73,64 +102,74 @@ def process_single_venue(venue_item, dates):
     if not venue_code:
         return None
 
-    session = requests.Session(impersonate="chrome120")
-    session.headers.update({
-        "Accept": "application/json, text/plain, */*",
-        "Accept-Language": "en-IN,en;q=0.9,hi;q=0.8",
-        "Referer": "https://in.bookmyshow.com/",
-        "Origin": "https://in.bookmyshow.com",
-        "appVersion": "14.5.1",
-        "os": "Android",
-        "osVersion": "13",
-        "X-Requested-With": "XMLHttpRequest",
-    })
-
-    MAX_RETRIES = 8  # Increased retries
     shard_data = {
         "state": state, "city": city,
         "venue_code": venue_code, "venue_name": venue_name,
         "movies": {}, "failed_dates": []
     }
 
-    for date_code in dates:
-        # Smart sleep — backs off globally if 429 was recently seen
-        sleep_time = smart_sleep()
-        time.sleep(sleep_time)
+    MAX_RETRIES = 5
 
+    for date_code in dates:
         data = None
+
         for attempt in range(MAX_RETRIES):
+            page = None
             try:
-                response = session.get(
-                    API_URL,
-                    params={"venueCode": venue_code, "dateCode": date_code},
-                    timeout=15
+                context = get_thread_context()
+                page = context.new_page()
+
+                # Use route to intercept and capture API response
+                captured = []
+
+                def handle_response(response):
+                    if "showtimes/byvenue" in response.url:
+                        try:
+                            captured.append(response.json())
+                        except:
+                            pass
+
+                page.on("response", handle_response)
+
+                # Navigate directly to the API URL — browser makes the request naturally
+                page.goto(
+                    f"{API_URL}?venueCode={venue_code}&dateCode={date_code}",
+                    wait_until="domcontentloaded",
+                    timeout=20000
                 )
 
-                if response.status_code == 200:
-                    data = response.json()
+                if captured:
+                    data = captured[0]
                     break
+                else:
+                    # Try reading page content directly
+                    try:
+                        content = page.inner_text("body")
+                        if content and "{" in content:
+                            data = json.loads(content)
+                            if "ShowDetails" in data or "status" in data:
+                                if data.get("status") == 429:
+                                    wait_time = (2 ** attempt) + random.uniform(3, 6)
+                                    print(f"  ⏳ 429 on {venue_code}, waiting {wait_time:.1f}s")
+                                    page.close()
+                                    time.sleep(wait_time)
+                                    continue
+                                break
+                    except:
+                        pass
 
-                elif response.status_code == 429:
-                    # Signal all threads that rate limit was hit
-                    with rate_limit_lock:
-                        last_429_time = time.time()
-
-                    wait_time = (2 ** attempt) + random.uniform(3, 6)
-                    print(f"  ⏳ 429 on {venue_code}, cooling down {wait_time:.1f}s (attempt {attempt+1})")
-                    time.sleep(wait_time)
-                    continue
-
-                elif response.status_code in [403, 404]:
-                    break  # No point retrying these
-
-                elif response.status_code in [500, 502, 503]:
-                    time.sleep(3)
-                    continue
-
-            except Exception:
+            except Exception as e:
                 time.sleep(2)
+            finally:
+                if page and not page.is_closed():
+                    try:
+                        page.close()
+                    except:
+                        pass
 
-        if not data:
+            time.sleep(random.uniform(0.2, 0.5))
+
+        if not data or "ShowDetails" not in data:
             shard_data["failed_dates"].append(date_code)
             continue
 
@@ -166,7 +205,6 @@ def process_single_venue(venue_item, dates):
                             if occ == 1.0: m["SoldOutShows"] += 1
                             elif occ >= 0.75: m["FastFillingShows"] += 1
 
-    session.close()
     return shard_data
 
 
@@ -247,7 +285,7 @@ def fetch_and_aggregate():
     total_failures = 0
     start_time     = time.time()
 
-    print(f"\n🚀 Starting extraction for {total_venues} venues | {WORKER_THREADS} threads")
+    print(f"\n🚀 Starting: {total_venues} venues | {WORKER_THREADS} threads | Playwright mode")
     print(f"📂 Output: {output_file}")
     print("=" * 60)
 
@@ -287,7 +325,10 @@ def fetch_and_aggregate():
             eta     = str(timedelta(seconds=int(avg * (total_venues - completed))))
             print(f"[{completed}/{total_venues}] {status} {venue_name_log} | 🎬 {len(shard_result['movies'])} movies | ⏱️ ETA: {eta}")
 
-    print("\n" + "=" * 60)
+    # Cleanup all thread browsers
+    print("\n🧹 Cleaning up...")
+
+    print(f"\n{'='*60}")
     print(f"🎯 DONE IN {str(timedelta(seconds=int(time.time() - start_time)))}")
     print(f"Total Venues:   {total_venues}")
     print(f"Total Failures: {total_failures}")
