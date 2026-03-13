@@ -36,12 +36,16 @@ jobs:
       - name: Run scraper
         env:
           SUPER_KEY: ${{ secrets.SUPER_KEY }}
-        run: python run.py
+        run: python liverun.py
 
       - name: Commit and push data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "data: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          
+          # This ensures old deleted files are registered by git
+          git add --all data/
+          
+          # Only commit if there are changes
+          git diff --cached --quiet || git commit -m "Update data: $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
