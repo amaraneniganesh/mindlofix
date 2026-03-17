@@ -38,13 +38,13 @@ jobs:
       - name: 1. Run BMS Fetcher
         env:
           SUPER_KEY: ${{ secrets.SUPER_KEY }}
-        run: python liverun.py
+        run: python BMSLIVERUN.py
 
       - name: 2. Run District Fetcher
-        run: python LiveDistrictrun.py
+        run: python DistrictLiveRun.py
 
       - name: 3. Run Merger
-        run: python mergerrun.py
+        run: python MergerRun.py
 
       - name: Commit and push data
         run: |
