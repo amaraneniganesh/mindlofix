@@ -1,0 +1,62 @@
+# name: Hourly Collections Scraper
+
+# on:
+#   schedule:
+#     - cron: '0 * * * *' # Runs at minute 0 of every hour
+#   workflow_dispatch: # Allows manual triggering from the Actions tab
+
+# permissions:
+#   contents: write
+
+# jobs:
+#   scrape:
+#     runs-on: ubuntu-latest
+#     timeout-minutes: 55
+
+#     steps:
+#       - name: Checkout repo
+#         uses: actions/checkout@v4
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           fetch-depth: 1 # Fetches the latest commit to read existing JSON data
+
+#       - name: Setup Python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+
+#       - name: Install dependencies
+#         # Added 'requests' for the District fetcher
+#         run: pip install playwright requests cryptography
+
+#       - name: Install Chromium
+#         run: playwright install chromium --with-deps
+
+#       - name: Create data directory
+#         run: mkdir -p data
+
+#       - name: 1. Run BMS Fetcher
+#         env:
+#           SUPER_KEY: ${{ secrets.SUPER_KEY }}
+#         run: python BMSLIVERUN.py
+
+#       - name: 2. Run District Fetcher
+#         run: python DistrictLiveRun.py
+
+#       - name: 3. Run Merger
+#         run: python MergerRun.py
+
+#       - name: Commit and push data
+#         run: |
+#           git config user.name "github-actions[bot]"
+#           git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+#           # Pull latest changes to avoid merge conflicts if manual edits were made
+#           git pull --rebase origin main || true
+          
+#           # This ensures old deleted files and newly modified files are registered by git
+#           git add --all data/
+          
+#           # Only commit if there are changes
+#           git diff --cached --quiet || git commit -m "Update collections data: $(date -u +'%Y-%m-%d %H:%M UTC')"
+#           git push
